@@ -4,6 +4,10 @@ A custom WordPress portfolio theme built to demonstrate modern WordPress theme d
 
 The theme combines traditional WordPress development with a modern front-end workflow using PHP, SCSS, vanilla JavaScript, ES modules, Vite, Gutenberg, and Kadence Blocks.
 
+## Preview
+
+![Portfolio Theme Homepage](screenshots/portfolio-preview.png)
+
 ## Features
 
 - Custom WordPress theme architecture
