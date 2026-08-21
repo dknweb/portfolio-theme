@@ -1,0 +1,134 @@
+@use "../abstracts" as *;
+
+.service-detail {
+	display: grid;
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+	gap: rem(80);
+	padding: rem(72) 0;
+	border-top: rem(1) solid $color-border;
+
+	&:last-child {
+		border-bottom: rem(1) solid $color-border;
+	}
+
+	&__intro {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__number {
+		margin-bottom: rem(24);
+		font-size: rem(16);
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		color: $color-secondary;
+	}
+
+	&__title {
+		margin: 0 0 rem(24);
+		font-size: rem(32);
+		line-height: 1.25;
+		color: $color-heading;
+	}
+
+	&__summary {
+		max-width: rem(480);
+		margin: 0;
+		font-size: rem(18);
+		line-height: 1.7;
+		color: $color-text;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+	}
+
+	&__description {
+		margin: 0;
+		font-size: rem(18);
+		line-height: 1.75;
+		color: $color-text;
+	}
+
+	&__features {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: rem(16) rem(32);
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+	}
+
+	&__feature {
+		position: relative;
+		padding-left: rem(24);
+
+		font-size: rem(16);
+		line-height: 1.6;
+		color: $color-text;
+
+		&::before {
+			position: absolute;
+			top: rem(10);
+			left: 0;
+			width: rem(8);
+			height: rem(8);
+			border-radius: 50%;
+			background-color: $color-secondary;
+
+			content: "";
+		}
+	}
+}
+
+@include respond-below(tablet) {
+	.service-detail {
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+		gap: rem(48);
+		padding: rem(56) 0;
+
+		&__title {
+			font-size: rem(28);
+		}
+
+		&__summary,
+		&__description {
+			font-size: rem(17);
+		}
+	}
+}
+
+@include respond-below(mobile) {
+	.service-detail {
+		grid-template-columns: 1fr;
+		gap: rem(32);
+		padding: rem(48) 0;
+
+		&__number {
+			margin-bottom: rem(16);
+		}
+
+		&__title {
+			margin-bottom: rem(16);
+			font-size: rem(26);
+		}
+
+		&__summary,
+		&__description {
+			font-size: rem(16);
+		}
+
+		&__content {
+			gap: rem(24);
+		}
+
+		&__features {
+			grid-template-columns: 1fr;
+			gap: rem(12);
+		}
+	}
+}

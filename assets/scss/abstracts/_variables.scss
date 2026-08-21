@@ -1,0 +1,107 @@
+/* ========================================
+   Colors
+======================================== */
+
+// Brand Colors
+$color-primary: rgb(31 41 55);
+$color-secondary: rgb(255 107 0);
+
+// Accessible secondary-button states
+$color-secondary-button: rgb(201 79 0);
+$color-secondary-button-hover: rgb(185 71 0);
+$color-secondary-button-active: rgb(168 63 0);
+
+// Accessible accent text on light surfaces
+
+// Typography
+$color-heading: rgb(31 41 55);
+$color-text: rgb(75 85 99);
+
+$color-white: rgb(255 255 255);
+$color-black: rgb(0 0 0);
+
+// Backgrounds & Borders
+$color-background-alt: rgb(249 250 253);
+$color-border: rgb(229 231 235);
+
+// Footer
+$footer-color-text: rgb(136 148 149);
+
+/* ========================================
+   Typography
+======================================== */
+
+$font-family-base: "InterVariable", sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.7;
+
+
+/* ========================================
+   Heading
+======================================== */
+$heading-1: 3rem;
+$heading-2: 2.25rem;
+$heading-3: 1.75rem;
+$heading-4: 1.5rem;
+$heading-5: 1.25rem;
+$heading-6: 1rem; 
+
+$text-description: 1.125rem;
+
+
+/* ========================================
+   Layout
+======================================== */
+
+$container-width: 1200px;
+$container-padding: 1.5rem;
+
+/* ========================================
+   Spacing
+======================================== */
+
+$space-1: .5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2rem;
+$space-5: 3rem;
+$space-6: 4rem;
+
+/* ========================================
+   Radius
+======================================== */
+
+$radius-sm: .5rem;
+$radius-md: .75rem;
+$radius-lg: 1.25rem;
+$radius-pill: 999px;
+
+/* ========================================
+   Transition
+======================================== */
+
+$transition: .25s ease;
+$transition-slow: .4s ease;
+
+/* ========================================
+   Shadow
+======================================== */
+$shadow-sm: 0 .125rem .25rem rgb(0 0 0 / .08);
+$shadow-md: 0 .5rem 1rem rgb(0 0 0 / .12);
+$shadow-header: 0 0.5rem 1.5rem rgb(0 0 0 / 0.08);
+
+/* ========================================
+   Cards
+======================================== */
+
+$card-background: $color-white;
+$card-border: 0.0625rem solid rgb(0 0 0 / .06);
+$card-radius: $radius-lg;
+$card-shadow: 0 .5rem 1.5rem rgb(0 0 0 / .06);
+$card-shadow-hover: 0 1.25rem 2.5rem rgb(0 0 0 / .1);
+
+/* ========================================
+   Z-index
+======================================== */
+$z-header: 100;
+$z-modal: 300;

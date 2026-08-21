@@ -1,0 +1,23 @@
+@use "sass:color";
+@use "sass:math";
+
+/// Convert px to rem
+/// Example: rem(32) -> 2rem
+@function rem($px, $base: 16) {
+    @return math.div($px, $base) * 1rem;
+}
+
+/// Sets the alpha channel of a color.
+@function with-opacity($color, $opacity: 1) {
+    @return color.change($color, $alpha: $opacity);
+}
+
+/// Darkens a color by a fixed lightness amount.
+@function darken($color, $amount) {
+    @return color.adjust($color, $lightness: -$amount);
+}
+
+/// Lightens a color by a fixed lightness amount.
+@function lighten($color, $amount) {
+    @return color.adjust($color, $lightness: $amount);
+}

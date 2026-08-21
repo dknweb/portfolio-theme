@@ -1,0 +1,81 @@
+@use "../../abstracts" as *;
+
+.section-about {
+    padding-block: rem(120);
+
+    &__inner {
+        display: grid;
+        grid-template-columns: minmax(0, rem(520)) 1fr;
+        gap: rem(80);
+        align-items: center;
+
+        @include respond-below(tablet) {
+            grid-template-columns: 1fr;
+            gap: rem(56);
+        }
+    }
+
+    &__content {
+        .section-title {
+            margin-block: rem(24);
+        }
+
+        .section-description {
+            margin-bottom: rem(40);
+            max-width: rem(500);
+        }
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: rem(24);
+
+        @include respond-below(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.about-card {
+    padding: rem(40);
+    border: $card-border;
+    border-radius: $card-radius;
+    background-color: $card-background;
+    box-shadow: $card-shadow;
+
+    &__icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        inline-size: rem(64);
+        block-size: rem(64);
+        margin-bottom: rem(24);
+        border-radius: 50%;
+        background-color: with-opacity($color-secondary, 0.08);
+
+        img {
+            inline-size: rem(40);
+            block-size: auto;
+        }
+
+        svg {
+            color: $color-secondary;
+            block-size: 2rem;
+            inline-size: 2rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(8);
+        color: $color-primary;
+        font-size: rem(20);
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__text {
+        color: $color-text;
+        margin: 0;
+    }
+}

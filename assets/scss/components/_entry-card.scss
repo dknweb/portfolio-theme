@@ -1,0 +1,99 @@
+@use "../abstracts/" as *;
+
+.entry-card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	overflow: hidden;
+
+	border: rem(1) solid $color-border;
+	border-radius: rem(8);
+	background-color: $color-white;
+
+	&__image {
+		display: block;
+		overflow: hidden;
+		aspect-ratio: 16 / 10;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		&:hover img {
+			transform: scale(1.03);
+		}
+
+		&:focus-visible {
+			outline: rem(2) solid $color-secondary;
+			outline-offset: rem(-2);
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		padding: rem(28);
+	}
+
+	&__meta {
+		margin-bottom: rem(12);
+		font-size: rem(14);
+		color: $color-text;
+	}
+
+	&__title {
+		margin: 0 0 rem(16);
+		font-size: rem(24);
+		line-height: 1.3;
+
+		a {
+			color: $color-heading;
+			text-decoration: none;
+
+			&:hover,
+			&:focus-visible {
+				color: $color-secondary;
+			}
+		}
+	}
+
+	&__excerpt {
+		margin-bottom: rem(24);
+		color: $color-text;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&__link {
+		margin-top: auto;
+		align-self: flex-start;
+
+		font-weight: 600;
+		color: $color-primary;
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			color: $color-secondary;
+			text-decoration: underline;
+		}
+
+		&:focus-visible {
+			outline: rem(2) solid $color-secondary;
+			outline-offset: rem(3);
+		}
+	}
+
+	@include respond-below(mobile) {
+		&__content {
+			padding: rem(24);
+		}
+	}
+}

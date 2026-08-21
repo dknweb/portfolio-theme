@@ -1,0 +1,23 @@
+@use "../../abstracts/" as *;
+
+.site-header {
+	position: sticky;
+    top: 0;
+    z-index: $z-header;
+    background-color: $color-white;
+    transition: box-shadow $transition;
+}
+
+.site-header.is-sticky {
+	box-shadow: $shadow-header;
+}
+
+.site-header__inner {
+	align-items: center;
+	display: flex;
+	gap: $space-3;
+	justify-content: space-between;
+	min-height: rem(80);
+}
+
+

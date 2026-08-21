@@ -1,0 +1,39 @@
+@use "../../abstracts" as *;
+
+.site-branding {
+	color: $color-heading;
+    flex-shrink: 0;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-2;
+        color: inherit;
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(40);
+        height: rem(40);
+        flex-shrink: 0;
+        background-color: $color-secondary;
+        border-radius: $radius-md;
+        color: $color-white;
+
+        svg {
+            width: rem(20);
+            height: rem(20);
+            color: $color-white;
+        }
+    }
+
+    &__title {
+        font-size: rem(18);
+        font-weight: 700;
+        line-height: 1;
+        color: inherit;
+    }
+}
+

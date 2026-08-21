@@ -1,0 +1,51 @@
+@use "../../abstracts" as *;
+
+.project-filters {
+
+	margin-bottom: rem(64);
+
+	&__list {
+		display: flex;
+		gap: rem(24);
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(8);
+		min-height: rem(48);
+		padding: rem(12) rem(22);
+		border: rem(1) solid $color-primary;
+		border-radius: rem(999);
+		font-size: rem(14);
+		font-weight: 650;
+		line-height: 1;
+		text-decoration: none;
+		transition:
+			background-color $transition,
+			border-color $transition,
+			color $transition,
+			box-shadow $transition,
+			transform $transition;
+
+		&:hover {
+			background-color: $color-primary;
+			border-color: $color-primary;
+			color: $color-white;
+		}
+	}
+	
+
+	
+
+	@include respond-below(tablet) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@include respond-below(mobile) {
+		grid-template-columns: 1fr;
+	}
+}

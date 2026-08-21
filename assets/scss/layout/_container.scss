@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+
+.container {
+    width: min(
+        calc(100% - ($container-padding * 2)),
+        $container-width
+    );
+    margin-right: auto;
+    margin-left: auto;
+}
+

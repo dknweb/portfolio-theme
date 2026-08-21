@@ -1,0 +1,110 @@
+@use "../../abstracts" as *;
+
+.section-skills {
+    padding-top: rem(0);
+    padding-bottom: rem(60);
+
+    > .kt-row-column-wrap {
+		width: min(100% - 3rem, 75rem);
+		margin-right: auto;
+		margin-left: auto;
+		//align-items: center;
+		gap: 4rem;
+	}
+
+}
+
+.skills-list {
+    > .wp-block-group__inner-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(120), 1fr));
+        gap: $space-3;
+    }
+        
+}
+
+.skills-card {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+
+    min-height: rem(150);
+    padding: $space-2 $space-3;
+
+    border: $card-border;
+    border-radius: $card-radius;
+    background-color: $card-background;
+    box-shadow: $card-shadow;*/
+
+    > .wp-block-group__inner-container {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+
+    min-height: rem(150);
+    padding: $space-2 $space-3;
+
+    border: $card-border;
+    border-radius: $card-radius;
+    background-color: $card-background;
+    box-shadow: $card-shadow;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: rem(64);
+        height: rem(64);
+
+        img {
+            width: rem(56);
+            height: rem(56);
+            object-fit: contain;
+        }
+    }
+
+    &__title {
+        margin: 0;
+
+        font-size: rem(15);
+        font-weight: 600;
+        line-height: 1.4;
+        text-align: center;
+
+        color: $color-heading;
+    }
+}
+
+@include respond-below(laptop) {
+    .skills-list  {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include respond-below(tablet) {
+    .skills-list  {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include respond-below(mobile) {
+    .section-skills {
+        padding-top: rem(72);
+        padding-bottom: rem(72);
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-2;
+    }
+
+    .skills-card {
+        min-height: rem(150);
+    }
+}

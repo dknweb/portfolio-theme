@@ -1,0 +1,91 @@
+@use "../../abstracts" as *;
+
+
+
+.section-expertise {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+
+    .kt-row-column-wrap {
+		width: min(100% - 3rem, 75rem);
+		margin-right: auto;
+		margin-left: auto;
+		align-items: center;
+		gap: rem(32);
+	}
+
+
+}
+
+.expertise-list {
+
+    &__item {
+        padding: rem(32);
+        border: $card-border;
+        border-radius: $card-radius;
+        background-color: $card-background;
+        box-shadow: $card-shadow;
+        height: 100%;
+    }
+    
+    &__heading {
+        display: flex;
+        margin-bottom: $space-3;
+        align-items: center;
+        gap: $space-3;
+    }
+
+    &__title {
+        font-size: rem(22);
+        margin-bottom: 0;
+    }
+}
+
+
+.expertise-list__icon {
+    background-color: transparent;
+    margin-bottom: 0!important;
+    width: rem(80);
+    height: rem(80);
+
+    svg {
+        width: rem(56);
+        height: rem(56);
+    }
+}
+
+
+@include respond-below(laptop) {
+    .expertise-list__heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@include respond-below(tablet) {
+
+    .expertise-list {
+        &__item {
+            padding: $space-2;
+        }
+
+        &__heading {
+            align-items: center;
+        }
+
+        &__title,
+        &__description {
+            text-align: center;
+        }
+    }
+
+    .expertise-list__icon {
+        width: rem(72);
+        height: rem(72);
+
+        svg {
+            width: rem(48);
+            height: rem(48);
+        }
+    }
+}

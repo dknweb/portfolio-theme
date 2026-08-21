@@ -1,0 +1,52 @@
+@use "../../abstracts" as *;
+
+
+.footer-about .site-branding {
+	color: $color-white;
+	margin-bottom: $space-3;
+}
+
+.footer-socials {
+    display: flex;
+    gap: $space-2;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(48);
+        height: rem(48);
+		background: with-opacity($color-white, 0.1);
+        border: rem(1) solid with-opacity($color-white, 0.2);
+        border-radius: $radius-md;
+        color: $footer-color-text;
+        transition:
+            color $transition,
+            background-color $transition,
+            border-color $transition;
+
+        &:hover,
+        &:focus-visible {
+            background-color: with-opacity($color-secondary, 0.12);
+            border-color: $color-secondary;
+			color: $color-secondary;
+        }
+
+        svg {
+            width: rem(18);
+            height: rem(18);
+        }
+    }
+}
+
+@include respond-below(mobile) {
+
+	.footer-about {
+		text-align: center;
+	}
+	
+	.footer-socials {
+		justify-content: center;
+	}
+
+}

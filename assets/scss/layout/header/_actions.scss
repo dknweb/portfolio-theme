@@ -1,0 +1,26 @@
+@use "../../abstracts" as *;
+
+.header-actions  {
+	
+	.btn {
+		min-height: rem(48);
+		font-weight: 400;
+		
+	}
+
+	.icon {
+		color: $color-white;
+		aspect-ratio: 0;
+	}
+	
+}
+
+@include respond-below(tablet) {
+
+	.header-actions .btn {
+		display: none;
+	}
+	
+}
+
+

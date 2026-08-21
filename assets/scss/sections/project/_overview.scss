@@ -1,0 +1,48 @@
+@use "../../abstracts" as *;
+
+.project-overview {
+	background-color: $color-white;
+
+	@include kadence-container {
+		width: min(100% - 3rem, 75rem);
+		margin-right: auto;
+		margin-left: auto;
+		gap: 4rem;
+		padding-top: rem(60);
+	}
+
+
+    .section-heading__title {
+        margin-top: 0px;
+    }
+
+	&__description {
+		p {
+			margin: 0;
+			color: $color-text;
+			font-size: rem(16);
+			line-height: 1.75;
+
+			& + p {
+				margin-top: rem(16);
+			}
+		}
+	}
+
+	&__meta-label {
+		margin-bottom: rem(6);
+		color: $color-heading;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 1.4;
+	}
+
+	&__meta-value {
+		margin: 0;
+		color: $color-text;
+		font-size: rem(14);
+		line-height: 1.6;
+	}
+
+}
+

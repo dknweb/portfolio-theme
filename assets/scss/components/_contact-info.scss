@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+.contact-info {
+
+    > .wp-block-group__inner-container {
+        display: grid;
+	    gap: 3.5rem;
+    }
+	
+
+	&__item {
+		display: grid;
+		grid-template-columns: 3.5rem 1fr;
+		gap: rem(20);
+		align-items: center;
+	}
+
+	
+	&__content {
+		min-width: 0;
+	}
+
+    h3,
+	&__title {
+		color: $color-heading;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.25;
+        margin: 0;
+	}
+
+	&__value {
+		display: inline-block;
+		margin: 0;
+		color: $color-text;
+		font-size: 1rem;
+		line-height: 1.5;
+		text-decoration: none;
+		overflow-wrap: anywhere;
+	}
+
+	a.contact-info__value {
+		transition: color $transition;
+
+		&:hover {
+			color: $color-secondary;
+		}
+
+		&:focus-visible {
+			color: $color-secondary;
+			outline: 0.125rem solid $color-secondary;
+			outline-offset: 0.25rem;
+			border-radius: 0.125rem;
+		}
+	}
+
+	@include respond-below(mobile) {
+		gap: 2rem;
+
+		&__item {
+			grid-template-columns: 3rem 1fr;
+			gap: 0.875rem;
+		}
+
+		&__title {
+			margin-bottom: 0.25rem;
+			font-size: 1.25rem;
+		}
+	}
+}

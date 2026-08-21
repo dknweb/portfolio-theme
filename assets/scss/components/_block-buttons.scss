@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+a.wp-block-kadence-singlebtn.block-button,
+.wp-block-kadence-singlebtn .kt-button.block-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(8);
+	min-height: rem(48);
+	padding: rem(12) rem(22);
+	border: rem(1) solid transparent;
+	border-radius: rem(999);
+	font-size: rem(14);
+	font-weight: 650;
+	line-height: 1;
+	text-decoration: none;
+	transition:
+		background-color $transition,
+		border-color $transition,
+		color $transition,
+		box-shadow $transition,
+		transform $transition;
+
+	&:hover,
+	&:focus,
+	&:focus-visible {
+		transform: translateY(rem(-2));
+	}
+
+	&:focus-visible {
+		outline: rem(2) solid $color-white;
+		outline-offset: rem(2);
+		box-shadow: 0 0 0 rem(5) $color-primary;
+	}
+
+	&--primary {
+		border-color: $color-primary;
+		background-color: $color-primary;
+		color: $color-white;
+
+		&:hover,
+		&:focus-visible {
+			border-color: $color-secondary;
+			background-color: $color-secondary;
+			color: $color-white;
+		}
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+		color: $color-white;
+		box-shadow: 0 rem(10) rem(24)
+			with-opacity($color-secondary, 0.2);
+
+		&:hover,
+		&:focus-visible {
+			background-color: darken($color-secondary, 8%);
+			color: $color-white;
+			box-shadow: 0 rem(14) rem(28)
+				with-opacity($color-secondary, 0.28);
+		}
+	}
+
+	&--outline {
+		border-color: $color-primary;
+		background-color: transparent;
+		color: $color-primary;
+
+		&:hover,
+		&:focus-visible {
+			border-color: $color-primary;
+			background-color: $color-primary;
+			color: $color-white;
+		}
+	}
+
+	.kt-btn-inner-text,
+	.kt-button-text {
+		line-height: 1;
+	}
+
+	.kb-svg-icon-wrap,
+	.kt-btn-svg-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.kb-svg-icon-wrap svg,
+	.kt-btn-svg-icon svg {
+		width: rem(18);
+		height: rem(18);
+		fill: none;
+		stroke: currentColor;
+	}
+}

@@ -1,0 +1,45 @@
+@use "../../abstracts" as *;
+
+.footer-navigation {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr)
+						minmax(0, 2fr)
+						minmax(0, 1fr);
+	gap: 2rem;
+}
+
+
+.footer-title {
+	color: $color-white;
+}
+
+.footer-menu a {
+	color: $footer-color-text;
+	transition: color $transition;
+	
+	&:hover,
+	&:focus-visible {
+		color: $color-secondary;
+	}
+	
+}
+
+
+
+@include respond-below(tablet) {
+
+	.footer-navigation {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+}
+
+@include respond-below(mobile) {
+
+	.footer-navigation {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		text-align: center;
+	}
+
+}

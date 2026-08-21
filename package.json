@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-theme",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run editor",
+
+    "editor": "sass assets/scss/editor-style.scss assets/css/editor-style.css",
+    "editor:watch": "sass --watch assets/scss/editor-style.scss:assets/css/editor-style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.0",
+    "vite": "^8.1.3"
+  }
+}

@@ -1,0 +1,111 @@
+@use "../abstracts" as *;
+
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(8);
+    min-height: rem(48);
+    padding: rem(12) rem(22);
+    border: rem(1) solid transparent;
+    border-radius: rem(999);
+    font-size: rem(14);
+    font-weight: 650;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        background-color $transition,
+        border-color $transition,
+        color $transition,
+        box-shadow $transition,
+        transform $transition;
+
+    white-space: nowrap;
+
+    &:focus-visible {
+        outline: rem(2) solid $color-white;
+        outline-offset: rem(2);
+        box-shadow: 0 0 0 rem(5) $color-primary;
+    }
+
+    &:not(:disabled, [aria-disabled="true"]):hover {
+        transform: translateY(rem(-2));
+    }
+
+    &:not(:disabled, [aria-disabled="true"]):active {
+        transform: translateY(0);
+    }
+
+    &:disabled,
+    &[aria-disabled="true"] {
+        opacity: .55;
+        cursor: not-allowed;
+    }
+
+    &--primary {
+        border-color: $color-primary;
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:not(:disabled, [aria-disabled="true"]):hover {
+            border-color: darken($color-primary, 6%);
+            background-color: darken($color-primary, 6%);
+        }
+
+        &:not(:disabled, [aria-disabled="true"]):active {
+            border-color: darken($color-primary, 10%);
+            background-color: darken($color-primary, 10%);
+        }
+    }
+
+    &--secondary {
+        background-color: $color-secondary;
+        color: $color-white;
+        box-shadow: 0 rem(10) rem(24)
+            with-opacity($color-secondary, 0.2);
+
+       
+
+        &:not(:disabled, [aria-disabled="true"]):hover {
+            background-color: darken($color-secondary, 8%);
+            color: $color-white;
+            box-shadow: 0 rem(14) rem(28)
+                with-opacity($color-secondary, 0.28);
+        }
+
+        &:not(:disabled, [aria-disabled="true"]):active {
+            border-color: $color-secondary-button-active;
+            background-color: $color-secondary-button-active;
+            box-shadow: none;
+        }
+
+        .icon svg {
+            stroke: $color-white;
+        }
+
+    }
+
+    &--outline {
+        border-color: $color-primary;
+        background-color: transparent;
+        color: $color-primary;
+
+        &:not(:disabled, [aria-disabled="true"]):hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+
+        &:not(:disabled, [aria-disabled="true"]):active {
+            border-color: darken($color-primary, 6%);
+            background-color: darken($color-primary, 6%);
+            color: $color-white;
+        }
+
+        &:hover .icon svg {
+            stroke: $color-white;
+        }
+    }
+
+}
+

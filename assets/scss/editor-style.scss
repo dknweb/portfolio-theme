@@ -1,0 +1,30 @@
+@use "abstracts/functions";
+@use "abstracts/variables";
+
+@use "base/fonts";
+@use "base/reset";
+@use "base/typography";
+@use "base/global";
+
+@use "components/block-buttons";
+@use "components/badge";
+@use "components/page-banner";
+@use "components/icon";
+
+@use "components/feature";
+@use "components/section-heading";
+
+
+@use "sections/homepage/hero";
+@use "sections/homepage/skills";
+//@use "sections/homepage/expertise";
+//@use "sections/homepage/process";
+
+@use "sections/project/features";
+@use "sections/project/gallery";
+
+
+
+
+
+

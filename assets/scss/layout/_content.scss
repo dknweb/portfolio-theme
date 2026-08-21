@@ -1,0 +1,19 @@
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+
+.site-content {
+    padding: $space-6 0;
+
+    &__no-padding {
+        padding: 0;
+    }
+}
+
+.page-template-full-column-no-title {
+    
+    .site-content {
+        padding: 0;
+    }
+
+}

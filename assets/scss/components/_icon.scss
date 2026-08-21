@@ -1,0 +1,100 @@
+@use "../abstracts" as *;
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    width: min(100%, rem(56));
+    //max-height: rem(56);
+
+    border-radius: 50%;
+    background-color: with-opacity($color-primary, 0.08);
+
+    color: $color-primary;
+    flex-shrink: 1;
+
+
+    svg {
+        width: 62%;
+		height: 62%;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.75;
+    }
+
+    &--fill {
+        svg {
+            fill: currentColor;
+            stroke: none;
+        }
+    }
+
+    &--stroke {
+        svg {
+            fill: none;
+            stroke: currentColor;
+        }
+    }
+
+    &--clear {
+        background-color: transparent;
+    }
+
+    &--rounded {
+        padding: rem(10);
+    }
+
+    &--primary {
+        background-color: with-opacity($color-secondary, 0.2);
+        color: $color-secondary;
+    }
+
+    &--gutenberg {
+
+        svg {
+            fill: currentColor;
+            stroke: none;
+        }
+
+    }
+    &--performance  {
+        color: #0f82bc;
+    }
+
+    &--shield {
+        color: #01843d;
+    }
+
+    &--small {
+        width: rem(36);
+    }
+
+    &--outline {
+		width: min(100%, rem(48));
+		//max-height: rem(48);
+		border: rem(1) solid with-opacity($color-secondary, 0.2);
+		border-radius: rem(12);
+		background-color: with-opacity($color-secondary, 0.06);
+		color: $color-secondary;
+
+        svg {
+            width: 50%;
+            height: 50%;
+        }
+		
+	}
+
+
+}
+
+.icon .kb-svg-icon-wrap svg {
+	width: min(100%, rem(48));
+}
+
+.btn .icon {
+    svg {
+        width: 50%;
+        height: 50%;
+    }
+}

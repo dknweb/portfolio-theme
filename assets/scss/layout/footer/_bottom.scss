@@ -1,0 +1,28 @@
+@use "../../abstracts" as *;
+
+.footer-copyright p {
+    font-size: 0.875rem;
+    color: $footer-color-text;
+	margin: 0;
+}
+
+
+.footer-back-to-top a {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: $footer-color-text;
+	transition: color $transition;
+
+	&:hover,
+	&:focus-visible {
+		color: $color-secondary;
+	}
+}
+
+@include respond-below(mobile) {
+
+    .footer-back-to-top {
+        margin-top: $space-1;
+    }
+	
+}

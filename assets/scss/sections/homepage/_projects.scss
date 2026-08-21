@@ -1,0 +1,18 @@
+@use "../../abstracts" as *;
+
+.section-projects {
+    position: relative;
+    overflow: hidden;
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    background-color: $color-background-alt;
+
+    > .kt-row-column-wrap {
+		width: min(100% - 3rem, 75rem);
+		margin-right: auto;
+		margin-left: auto;
+		//align-items: center;
+		gap: 4rem;
+	}
+}
+

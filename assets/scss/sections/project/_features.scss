@@ -1,0 +1,56 @@
+@use "../../abstracts" as *;
+
+.project-features {
+
+	@include kadence-container {
+		width: min(100% - 3rem, 75rem);
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 0;
+	}
+
+}
+
+.project-feature {
+	height: 100%;
+	padding: rem(28) rem(24);
+	border: rem(1) solid $color-border;
+	border-radius: rem(12);
+	background-color: $color-white;
+	transition:
+		border-color $transition,
+		box-shadow $transition,
+		transform $transition;
+
+	&:hover {
+		border-color: with-opacity($color-secondary, 0.35);
+		box-shadow:
+			0 rem(16) rem(32) with-opacity($color-primary, 0.08),
+			0 rem(4) rem(12) with-opacity($color-primary, 0.04);
+		transform: translateY(rem(-4));
+	}
+
+	&__icon { 
+		margin-bottom: rem(10);
+	}
+
+	&__title {
+		margin: rem(15) 0 rem(12);
+		color: $color-heading;
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1.4;
+	}
+
+	&__description {
+		margin: 0;
+		color: $color-text;
+		font-size: rem(14);
+		line-height: 1.7;
+	}
+
+	@include respond-below(mobile) {
+		padding: rem(24);
+	}
+}
+

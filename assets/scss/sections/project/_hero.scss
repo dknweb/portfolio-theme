@@ -1,0 +1,226 @@
+@use "../../abstracts" as *;
+
+.project-hero {
+	padding: rem(60) 0;
+	background: $color-background-alt;
+
+	&__inner {
+		display: grid;
+		grid-template-columns:
+			minmax(0, 0.85fr)
+			minmax(0, 1.15fr);
+		align-items: center;
+		gap: rem(80);
+	}
+
+	&__content {
+		max-width: rem(544);
+	}
+
+	&__badge {
+		margin-bottom: rem(20);
+	}
+
+	&__title {
+		margin: 0 0 rem(16);
+		color: $color-heading;
+		font-size: clamp(rem(40), 4vw, rem(60));
+		font-weight: 750;
+		line-height: 1.08;
+		letter-spacing: -0.04em;
+	}
+
+	&__summary {
+		max-width: rem(528);
+		margin: 0;
+		color: $color-text;
+		font-size: rem(17);
+		line-height: 1.75;
+	}
+
+	&__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(16) rem(28);
+		margin: rem(32) 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__meta-entry {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		color: $color-text;
+		font-size: rem(14);
+		font-weight: 500;
+	}
+
+	&__meta-icon {
+		height: rem(20);
+		width: rem(20);
+		
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(14);
+		margin-top: rem(36);
+	}
+
+	
+	&__button-icon {
+		width: rem(30);
+		
+		
+	}
+
+	&__media {
+		position: relative;
+		margin: 0;
+	}
+
+	&__image {
+		position: relative;
+		z-index: 1;
+		display: block;
+		width: 100%;
+		height: auto;
+		border: rem(1) solid with-opacity($color-primary, 0.08);
+		border-radius: rem(16);
+		box-shadow:
+			0 rem(20) rem(48) with-opacity($color-primary, 0.12),
+			0 rem(4) rem(16) with-opacity($color-primary, 0.06);
+		object-fit: cover;
+	}
+
+	@include respond-below(laptop) {
+		&__inner {
+			gap: rem(56);
+		}
+	}
+
+	@include respond-below(tablet) {
+		padding-bottom: rem(64);
+
+		&__inner {
+			grid-template-columns:
+				minmax(0, 1fr)
+				minmax(0, 1fr);
+			gap: rem(40);
+		}
+
+		&__title {
+			font-size: rem(44);
+		}
+
+		&__meta {
+			gap: rem(16) rem(24);
+		}
+	}
+
+	@include respond-below(mobile) {
+		
+
+		&__inner {
+			grid-template-columns: 1fr;
+			gap: rem(40);
+		}
+
+		&__content {
+			max-width: none;
+		}
+
+		&__title {
+			font-size: rem(38);
+		}
+
+		&__summary {
+			font-size: rem(16);
+		}
+
+		&__media {
+			order: -1;
+		}
+	}
+
+	@include respond-below(mobile-sm) {
+		&__title {
+			font-size: rem(32);
+		}
+
+		&__meta {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: rem(14);
+		}
+
+		&__actions {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+
+		&__button {
+			width: 100%;
+		}
+
+		&__image {
+			border-radius: rem(12);
+		}
+	}
+}
+
+.project-breadcrumb {
+	margin-bottom: rem(44);
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10);
+		margin: 0;
+		padding: 0;
+		color: $color-text;
+		font-size: rem(13);
+		list-style: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+
+		&:not(:last-child)::after {
+			color: with-opacity($color-text, 0.55);
+			content: "/";
+		}
+
+		&--current {
+			color: $color-heading;
+			font-weight: 600;
+		}
+	}
+
+	&__link {
+		color: $color-text;
+		text-decoration: none;
+		transition: color $transition;
+
+		&:hover {
+			color: $color-secondary;
+		}
+
+		&:focus-visible {
+			border-radius: rem(4);
+			outline: rem(2) solid $color-secondary;
+			outline-offset: rem(4);
+		}
+	}
+
+	@include respond-below(mobile) {
+		margin-bottom: rem(32);
+	}
+}
+

@@ -1,0 +1,33 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-heading;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: $space-3;
+}
+
+p {
+	margin-bottom: $space-3;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
